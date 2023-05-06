@@ -35,7 +35,7 @@ public class TestMaternidad {
 		Parteras partera = new Parteras();
 		assertNotNull(partera);
 	}
-	
+
 	@Test
 	public void queSePuedaCrearUnaPartera123() {
 		Parteras partera123 = new Parteras();
@@ -53,4 +53,5 @@ public class TestMaternidad {
 		Parteras partera123567 = new Parteras();
 		assertNotNull(partera123567);
 	}
+
 }
