@@ -11,7 +11,7 @@ public class TestMaternidad {
 
 	@Test
 	public void queSePuedaCrearUnaClinica() {
-		Clinica clinica = new Clinica();
+		Clinica clinica = new Clinica(null);
 		assertNotNull(clinica);
 	}
 
@@ -19,5 +19,10 @@ public class TestMaternidad {
 	public void queSePuedaCrearUnMedico() {
 		Medico medico = new Medico();
 		assertNotNull(medico);
+	}
+	
+	@Test
+	public void queSePuedaCrearUnBebeConDniYPartidaDeNacimiento() {
+		Bebe bebe = new bebe(null);
 	}
 }
