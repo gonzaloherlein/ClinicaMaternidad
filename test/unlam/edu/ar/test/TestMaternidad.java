@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import unlam.edu.ar.dominio.Clinica;
+import unlam.edu.ar.dominio.Medico;
 import unlam.edu.ar.dominio.Obstetra;
 
 public class TestMaternidad {
