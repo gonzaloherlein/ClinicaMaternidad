@@ -24,7 +24,6 @@ public class TestMaternidad {
 	}
 	
 	@Test
-
 	public void queSePuedaCrearUnaPartera() {
 		Parteras partera = new Parteras();
 		assertNotNull(partera);
