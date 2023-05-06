@@ -5,6 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import unlam.edu.ar.dominio.Clinica;
+import unlam.edu.ar.dominio.Medico;
+import unlam.edu.ar.dominio.Parteras;
+
 
 public class TestMaternidad {
 
@@ -14,4 +17,15 @@ public class TestMaternidad {
 		assertNotNull(clinica);
 	}
 
+	@Test
+	public void queSePuedaCrearUnMedico() {
+		Medico medico = new Medico();
+		assertNotNull(medico);
+	}
+	
+	@Test
+	public void queSePuedaCrearUnaPartera() {
+		Parteras partera = new Parteras();
+		assertNotNull(partera);
+	}
 }
