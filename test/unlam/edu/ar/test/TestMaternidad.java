@@ -12,7 +12,7 @@ public class TestMaternidad {
 
 	@Test
 	public void queSePuedaCrearUnaClinica() {
-		Clinica clinica = new Clinica();
+		Clinica clinica = new Clinica("das");
 		assertNotNull(clinica);
 	}
 
