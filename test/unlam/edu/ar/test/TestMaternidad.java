@@ -28,4 +28,5 @@ public class TestMaternidad {
 		Parteras partera = new Parteras();
 		assertNotNull(partera);
 	}
+
 }
