@@ -14,11 +14,7 @@ public class TestMaternidad {
 
 	@Test
 	public void queSePuedaCrearUnaClinica() {
-<<<<<<< HEAD
-		Clinica clinica = new Clinica("das");
-=======
 		Clinica clinica = new Clinica(null);
->>>>>>> fcc96d795536ab9673a660468443eb81fd8c9fdb
 		assertNotNull(clinica);
 	}
 	
