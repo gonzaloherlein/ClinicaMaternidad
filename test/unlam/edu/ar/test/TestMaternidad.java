@@ -8,6 +8,7 @@ import unlam.edu.ar.dominio.Clinica;
 import unlam.edu.ar.dominio.Medico;
 import unlam.edu.ar.dominio.Parteras;
 
+
 public class TestMaternidad {
 
 	@Test
