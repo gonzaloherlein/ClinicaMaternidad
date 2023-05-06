@@ -14,4 +14,9 @@ public class TestMaternidad {
 		assertNotNull(clinica);
 	}
 
+	@Test
+	public void queSePuedaCrearUnMedico() {
+		Medico medico = new Medico();
+		assertNotNull(medico);
+	}
 }
