@@ -7,4 +7,8 @@ public class Clinica {
 	public Clinica(String nombre) {
 		this.nombre = nombre;
 	}
+	
+	public Clinica() {
+		
+	}
 }
