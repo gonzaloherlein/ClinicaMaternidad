@@ -8,11 +8,12 @@ import unlam.edu.ar.dominio.Clinica;
 import unlam.edu.ar.dominio.Medico;
 import unlam.edu.ar.dominio.Parteras;
 
+
 public class TestMaternidad {
 
 	@Test
 	public void queSePuedaCrearUnaClinica() {
-		Clinica clinica = new Clinica();
+		Clinica clinica = new Clinica(null);
 		assertNotNull(clinica);
 	}
 
@@ -23,7 +24,8 @@ public class TestMaternidad {
 	}
 	
 	@Test
-	public void queSePuedaCrearUnPartera() {
+
+	public void queSePuedaCrearUnaPartera() {
 		Parteras partera = new Parteras();
 		assertNotNull(partera);
 	}
