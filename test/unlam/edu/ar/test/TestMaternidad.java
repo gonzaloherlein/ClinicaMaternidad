@@ -150,7 +150,8 @@ public class TestMaternidad {
 		Bebe pibe = new Bebe();
 		madre.parir(pibe);
 		
-		assertEquals(1, Madre.getHijos().size);
+		
+		assertEquals(1, madre.getHijos().size());
 	}
 	@Test
 	public void queUnaMadrePuedaParirMasDeUnaVez() {

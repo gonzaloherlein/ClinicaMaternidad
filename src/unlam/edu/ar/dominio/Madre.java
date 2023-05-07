@@ -54,7 +54,7 @@ public class Madre {
 
 
 
-	public void ArrayList<Bebe> getHijos() {
+	public ArrayList<Bebe> getHijos() {
 		return hijos;
 	}
 
