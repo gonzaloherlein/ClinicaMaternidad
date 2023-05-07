@@ -146,15 +146,36 @@ public class TestMaternidad {
 	
 	@Test
 	public void queUnaMadrePuedaParir() {
-		Madre madre = new Madre("Adriana", "Sánchez",68734544);
+		String nombreMadre = "Adriana";
+		String apellidoMadre = "Sánchez";
+		Integer dniMadre = 1235156136;
+		Madre madre = new Madre(nombreMadre, apellidoMadre, dniMadre);
+		
 		Bebe pibe = new Bebe();
+	
+		
 		madre.parir(pibe);
 		
 		
 		assertEquals(1, madre.getHijos().size());
 	}
+	
+	
 	@Test
 	public void queUnaMadrePuedaParirMasDeUnaVez() {
+		
+		String nombreMadre = "Adriana";
+		String apellidoMadre = "Sánchez";
+		Integer dniMadre = 1235156136;
+		Madre madre = new Madre(nombreMadre, apellidoMadre, dniMadre);
+		
+		Bebe pibe = new Bebe();
+		Bebe pibe2 = new Bebe();
+		Bebe pibe3 = new Bebe();
+		Bebe pibe4 = new Bebe();
+	
+		madre.parir(pibe);
+		
 		
 	}
 
