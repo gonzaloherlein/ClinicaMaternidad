@@ -141,5 +141,10 @@ public class TestMaternidad {
 		
 		assertTrue(partera.validarJubilacion());
 	}
+	
+	@Test
+	public void queUnaMadrePuedaParirMasDeUnaVez() {
+		
+	}
 
 }
