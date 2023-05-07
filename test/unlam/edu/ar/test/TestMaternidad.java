@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import unlam.edu.ar.dominio.Bebe;
 import unlam.edu.ar.dominio.Clinica;
+import unlam.edu.ar.dominio.Madre;
 import unlam.edu.ar.dominio.Medico;
 import unlam.edu.ar.dominio.Obstetra;
 import unlam.edu.ar.dominio.Partera;
@@ -142,7 +144,21 @@ public class TestMaternidad {
 		assertTrue(partera.validarJubilacion());
 	}
 	
+	@Test
+	public void queUnaMadrePuedaParir() {
+		Madre madre = new Madre("Adriana", "Sánchez",68734544);
+		Bebe pibe = new Bebe();
+		madre.parir(pibe);
+		
+		
+		assertEquals(1, madre.getHijos().size());
+	}
+	@Test
+	public void queUnaMadrePuedaParirMasDeUnaVez() {
+		
+	}
 	
+
 
 
 }
