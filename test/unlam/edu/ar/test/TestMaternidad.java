@@ -6,6 +6,8 @@ import org.junit.Test;
 
 import unlam.edu.ar.dominio.Clinica;
 import unlam.edu.ar.dominio.Medico;
+import unlam.edu.ar.dominio.Parteras;
+
 
 public class TestMaternidad {
 
@@ -21,8 +23,5 @@ public class TestMaternidad {
 		assertNotNull(medico);
 	}
 	
-	@Test
-	public void queSePuedaCrearUnBebeConDniYPartidaDeNacimiento() {
-		Bebe bebe = new bebe(null);
-	}
+
 }
