@@ -2,7 +2,7 @@ package unlam.edu.ar.dominio;
 
 import java.util.Objects;
 
-public class Medico {
+public abstract class Medico {
 	private String nombre;
 	private Integer edad;
 	private String dni;
@@ -49,6 +49,9 @@ public class Medico {
 		}
 		return false;
 	}
+	
+	public abstract Boolean validarJubilacion();
+	
 
 	@Override
 	public int hashCode() {

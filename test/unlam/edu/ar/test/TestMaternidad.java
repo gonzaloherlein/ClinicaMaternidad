@@ -19,12 +19,6 @@ public class TestMaternidad {
 	}
 	
 	@Test
-	public void queSePuedaCrearUnMedico() {
-		Medico medico = new Medico();
-		assertNotNull(medico);
-	}
-	
-	@Test
 	public void queSePuedaCrearUnaObstetra() {
 		Obstetra obstre = new Obstetra();
 		assertNotNull(obstre);
@@ -35,10 +29,10 @@ public class TestMaternidad {
 		String nombrePartera = "Eduarda";
 		Integer edadPartera = 23;
 		String telefonoPartera = "1134236477";
-		Partera partera = new Partera(nombrePartera, edadPartera, "123",telefonoPartera );
+		Medico partera = new Partera(nombrePartera, edadPartera, "123",telefonoPartera );
 		
 		
-		assertTrue(partera.validarTelefono(telefonoPartera));
+		assertTrue(((Partera) partera).validarTelefono(telefonoPartera));
 	}
 
 	@Test
@@ -46,9 +40,9 @@ public class TestMaternidad {
 		String nombreObstetra = "Eduardo";
 		Integer edadPartera = 23;
 
-		Obstetra obstetra = new Obstetra(nombreObstetra,edadPartera,"123" ,20);
+		Medico obstetra = new Obstetra(nombreObstetra,edadPartera,"123" ,20);
 		
-		assertTrue(obstetra.validarTrabajoFinDeSemana());
+		assertTrue(((Obstetra) obstetra).validarTrabajoFinDeSemana());
 		
 	}
 	
@@ -58,7 +52,7 @@ public class TestMaternidad {
 		Integer edadPartera = 23;
 		String telefonoPartera = "1134236477";
 		String dni = "43861369";
-		Partera partera = new Partera(nombrePartera, edadPartera, dni,telefonoPartera);
+		Medico partera = new Partera(nombrePartera, edadPartera, dni,telefonoPartera);
 		
 		assertTrue(partera.validarDni(dni));
 		assertNotNull(partera);
@@ -73,10 +67,10 @@ public class TestMaternidad {
 		String nombreClinica = "Hospital Italiano";
 		
 		Clinica clinica = new Clinica(nombreClinica);
-		Partera partera = new Partera(nombrePartera, edadPartera, dni,telefonoPartera);
+		Medico partera = new Partera(nombrePartera, edadPartera, dni,telefonoPartera);
 		
 		
-		assertTrue(partera.validarTelefono(telefonoPartera));
+		assertTrue(((Partera) partera).validarTelefono(telefonoPartera));
 		assertTrue(partera.validarDni(dni));
 		clinica.agregarMedicos(partera);
 		
@@ -91,12 +85,12 @@ public class TestMaternidad {
 		String dni = "43861369";
 		String nombreClinica = "Hospital Italiano";
 		
-		Obstetra obstetra = new Obstetra(nombreObstetra,edadObstetra,dni ,20);
+		Medico obstetra = new Obstetra(nombreObstetra,edadObstetra,dni ,20);
 		Clinica clinica = new Clinica(nombreClinica);
 
 		
 		
-		assertTrue(obstetra.validarTrabajoFinDeSemana());
+		assertTrue(((Obstetra) obstetra).validarTrabajoFinDeSemana());
 		assertTrue(obstetra.validarDni(dni));
 		clinica.agregarMedicos(obstetra);
 		
@@ -113,8 +107,8 @@ public class TestMaternidad {
 		String dni2 = "43861369";
 		String nombreClinica = "Hospital Italiano";
 		
-		Obstetra obstetra = new Obstetra(nombreObstetra,edadObstetra,dni ,20);
-		Obstetra obstetra2 = new Obstetra(nombreObstetra2,edadObstetra,dni2 ,20);
+		Medico obstetra = new Obstetra(nombreObstetra,edadObstetra,dni ,20);
+		Medico obstetra2 = new Obstetra(nombreObstetra2,edadObstetra,dni2 ,20);
 		Clinica clinica = new Clinica(nombreClinica);
 
 		
@@ -123,6 +117,29 @@ public class TestMaternidad {
 		
 		assertEquals(clinica.getListaDeMedicos().size(),  1);
 		
+	}
+	
+	@Test
+	public void queSeValideLaJubilacionDelObstetra() {
+		String nombreObstetra = "Miguel";
+		Integer edadObstetra = 60;
+		String dni = "43861369";
+		Medico obstetra = new Obstetra(nombreObstetra,edadObstetra,dni ,20);
+		
+		assertTrue(obstetra.validarJubilacion());
+	}
+	
+	@Test
+	public void queSeValideLaJubilacionDeLaPartera() {
+		String nombrePartera = "Eduarda";
+		Integer edadPartera = 50;
+		String telefonoPartera = "1134236477";
+		String dni = "43861369";
+		String nombreClinica = "Hospital Italiano";
+		
+		Medico partera = new Partera(nombrePartera, edadPartera, dni,telefonoPartera);
+		
+		assertTrue(partera.validarJubilacion());
 	}
 
 }

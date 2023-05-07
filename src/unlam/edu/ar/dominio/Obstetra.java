@@ -40,5 +40,13 @@ public class Obstetra extends Medico{
 		}
 		return trabaja;
 	}
+
+	@Override
+	public Boolean validarJubilacion() {
+		if(super.getEdad() >= 60) {
+			return true;
+		}
+		return false;
+	}
 	
 }
