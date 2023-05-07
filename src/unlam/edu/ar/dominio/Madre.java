@@ -15,6 +15,60 @@ public class Madre {
 		this.dni = dni;
 		this.hijos = new ArrayList<Bebe>();
 	}
+	
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+
+
+	public String getApellido() {
+		return apellido;
+	}
+
+
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+
+
+	public Integer getDni() {
+		return dni;
+	}
+
+
+
+	public void setDni(Integer dni) {
+		this.dni = dni;
+	}
+
+
+
+	public void ArrayList<Bebe> getHijos() {
+		return hijos;
+	}
+
+
+
+	public void setHijos(ArrayList<Bebe> hijos) {
+		this.hijos = hijos;
+	}
+
+
+
+	public void parir(Bebe hijo) {
+		hijos.add(hijo);
+	}
 }
 
 
