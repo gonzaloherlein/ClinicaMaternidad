@@ -28,4 +28,12 @@ public class Partera extends Medico{
 		}
 		return false;
 	}
+
+	@Override
+	public Boolean validarJubilacion() {
+		if(super.getEdad() >= 50) {
+			return true;
+		}
+		return false;
+	}
 }
