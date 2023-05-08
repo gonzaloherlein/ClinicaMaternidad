@@ -5,17 +5,21 @@ import java.util.Objects;
 public abstract class Medico {
 	private String nombre;
 	private Integer edad;
-	private String dni;
+	private Integer dni;
 	
 	public Medico() {
 		
 	}
 	
-	public Medico(String nombre, Integer edad,String dni) {
+	public Medico(String nombre, Integer edad,Integer dni) {
+		if(validarDni(dni)) {
+			this.setDni(dni);
+		}
+		else {
+		throw new IllegalArgumentException ("El DNI ingresado no es válido");
+		}
 		this.nombre = nombre;
 		this.edad = edad;
-		this.dni = dni;
-		validarDni(dni);
 	}
 
 	public String getNombre() {
@@ -34,16 +38,18 @@ public abstract class Medico {
 		this.edad = edad;
 	}
 
-	public String getDni() {
+	public Integer getDni() {
 		return dni;
 	}
 
-	public void setDni(String dni) {
+	public void setDni(Integer dni) {
 		this.dni = dni;
 	}
 	
-	public Boolean validarDni(String dni) {
-		if(this.dni.length() == 8) {
+	public Boolean validarDni(Integer dni) {
+		int cantidadDeDigitosDelDni = Integer.toString(dni.intValue()).length();
+		int cantidadDeDigitosMinimaParaUnDni = 7;
+		if(cantidadDeDigitosDelDni >= cantidadDeDigitosMinimaParaUnDni) {
 			setDni(dni);
 			return true;
 		}
