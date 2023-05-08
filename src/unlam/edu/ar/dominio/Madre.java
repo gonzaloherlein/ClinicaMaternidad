@@ -8,16 +8,30 @@ public class Madre {
 	private String apellido;
 	private Integer dni;
 	private ArrayList<Bebe> hijos = new ArrayList<>();
+	private boolean tieneLeche;
 	
 	public Madre(String nombre, String apellido, Integer dni) {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
 		this.hijos = new ArrayList<Bebe>();
+		this.tieneLeche=false;
 	}
 	
 	
 	
+	public boolean isTieneLeche() {
+		return tieneLeche;
+	}
+
+
+
+	public void setTieneLeche(boolean tieneLeche) {
+		this.tieneLeche = tieneLeche;
+	}
+
+
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -69,6 +83,8 @@ public class Madre {
 	public void parir(Bebe hijo) {
 		hijos.add(hijo);
 	}
+	
+	
 }
 
 
