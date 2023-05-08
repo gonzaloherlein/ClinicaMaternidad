@@ -8,7 +8,7 @@ public class Obstetra extends Medico{
 		
 	}
 	
-	public Obstetra(String nombre, Integer edad,String dni, Integer horasTrabajadas) {
+	public Obstetra(String nombre, Integer edad,Integer dni, Integer horasTrabajadas) {
 		super(nombre, edad, dni);
 		this.trabajaFinDeSemana = true;
 		this.horasTrabajadas = horasTrabajadas;
