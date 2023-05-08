@@ -247,6 +247,20 @@ public class TestMaternidad {
 		
 	}
 	
+	@Test
+	public void queUnBebeTomeLecheMaterna() {
+		String nombre="marcela";
+		String apellido="carla";
+		Integer dni=35418547;
+		Madre madre = new Madre(nombre,apellido,dni);
+		Bebe bebe = new Bebe();
+		madre.setTieneLeche(true);
+		assertTrue(bebe.tomarLecheMaterna(madre));
+		
+	}
+	
+	
+	
 
 
 

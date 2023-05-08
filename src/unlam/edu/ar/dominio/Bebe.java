@@ -32,6 +32,7 @@ public class Bebe {
 		return fechaDeNacimiento;
 	}
 	
+ 
 	public String getNombre() {
 		return nombre;
 	}
@@ -83,5 +84,15 @@ public class Bebe {
 		}
 		return true;
 	}
+
+	public boolean tomarLecheMaterna(Madre madre) {
+		boolean sePuedeTomar=false;
+		if(madre.isTieneLeche()) {
+			sePuedeTomar=true;
+		}
+		return sePuedeTomar;
+	}
+	
+	
 
 }
