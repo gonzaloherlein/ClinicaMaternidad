@@ -7,7 +7,7 @@ public class Partera extends Medico{
 		
 	}
 	
-	public Partera(String nombre, Integer edad,String dni,String telefono) {
+	public Partera(String nombre, Integer edad,Integer dni,String telefono) {
 		super(nombre, edad,dni);
 		this.telefono = telefono;
 	}
@@ -29,7 +29,6 @@ public class Partera extends Medico{
 		return false;
 	}
 
-	@Override
 	public Boolean validarJubilacion() {
 		if(super.getEdad() >= 50) {
 			return true;
