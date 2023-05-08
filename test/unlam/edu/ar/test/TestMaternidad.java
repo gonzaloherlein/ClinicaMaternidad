@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import unlam.edu.ar.dominio.Bebe;
 import unlam.edu.ar.dominio.Clinica;
+import unlam.edu.ar.dominio.Madre;
 import unlam.edu.ar.dominio.Medico;
 import unlam.edu.ar.dominio.Obstetra;
 import unlam.edu.ar.dominio.Partera;
@@ -211,7 +212,42 @@ public class TestMaternidad {
 		assertTrue(partera.validarJubilacion());
 	}
 	
+	@Test
+	public void queUnaMadrePuedaParir() {
+		String nombreMadre = "Adriana";
+		String apellidoMadre = "Sánchez";
+		Integer dniMadre = 1235156136;
+		Madre madre = new Madre(nombreMadre, apellidoMadre, dniMadre);
+		
+		Bebe pibe = new Bebe();
 	
+		
+		madre.parir(pibe);
+		
+		
+		assertEquals(1, madre.getHijos().size());
+	}
+	
+	
+	@Test
+	public void queUnaMadrePuedaParirMasDeUnaVez() {
+		
+		String nombreMadre = "Adriana";
+		String apellidoMadre = "Sánchez";
+		Integer dniMadre = 1235156136;
+		Madre madre = new Madre(nombreMadre, apellidoMadre, dniMadre);
+		
+		Bebe pibe = new Bebe();
+		Bebe pibe2 = new Bebe();
+		Bebe pibe3 = new Bebe();
+		Bebe pibe4 = new Bebe();
+	
+		madre.parir(pibe);
+		
+		
+	}
+	
+
 
 
 }
