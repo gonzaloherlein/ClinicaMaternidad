@@ -257,7 +257,6 @@ public class TestMaternidad {
 		madre.setTieneLeche(true);
 		assertTrue(bebe.tomarLecheMaterna(madre));
 		
-		
 	}
 	
 	
